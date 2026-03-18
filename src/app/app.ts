@@ -8,12 +8,12 @@ interface VideoItem {
 }
 
 const SOURCE_COLORS: Record<string, { badge: string; dot: string }> = {
-  'Reuters': { badge: 'bg-orange-50 text-orange-600', dot: 'bg-orange-500' },
-  'Washington Post': { badge: 'bg-blue-50 text-blue-600', dot: 'bg-blue-500' },
-  'CNN Travel': { badge: 'bg-red-50 text-red-600', dot: 'bg-red-500' },
-  'Financial Times': { badge: 'bg-amber-50 text-amber-700', dot: 'bg-amber-500' },
-  'The Guardian': { badge: 'bg-indigo-50 text-indigo-600', dot: 'bg-indigo-500' },
-  'National Geographic': { badge: 'bg-yellow-50 text-yellow-700', dot: 'bg-yellow-500' },
+  'Reuters': { badge: 'bg-orange-50 text-orange-700', dot: 'bg-orange-500' },
+  'Washington Post': { badge: 'bg-blue-50 text-blue-700', dot: 'bg-blue-600' },
+  'CNN Travel': { badge: 'bg-red-50 text-red-700', dot: 'bg-red-500' },
+  'Financial Times': { badge: 'bg-amber-50 text-amber-800', dot: 'bg-amber-600' },
+  'The Guardian': { badge: 'bg-indigo-50 text-indigo-700', dot: 'bg-indigo-500' },
+  'National Geographic': { badge: 'bg-yellow-50 text-yellow-800', dot: 'bg-yellow-600' },
   'Associated Press': { badge: 'bg-emerald-50 text-emerald-700', dot: 'bg-emerald-500' },
 };
 
