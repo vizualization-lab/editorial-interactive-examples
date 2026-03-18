@@ -29,10 +29,9 @@
         <!-- Now Playing Info -->
         <div class="mt-5 space-y-2">
           <span
-            class="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full"
-            [ngClass]="getSourceBadge(selectedVideo().source)"
+            [class]="'inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ' + getSourceBadge(selectedVideo().source)"
           >
-            <span class="w-1.5 h-1.5 rounded-full" [ngClass]="getSourceDot(selectedVideo().source)"></span>
+            <span [class]="'w-1.5 h-1.5 rounded-full ' + getSourceDot(selectedVideo().source)"></span>
             {{ selectedVideo().source }}
           </span>
           <h2 class="text-2xl font-editorial text-gray-900 leading-snug">{{ selectedVideo().title }}</h2>
@@ -52,17 +51,17 @@
           <div class="space-y-1.5 max-h-[calc(100vh-12rem)] overflow-y-auto pr-1 playlist-scroll">
             @for (video of videos; track video.file; let i = $index) {
               <button
-                class="w-full flex items-start gap-3 p-3 rounded-xl text-left transition-all duration-200 cursor-pointer"
-                [ngClass]="i === selectedIndex()
-                  ? 'bg-white shadow-md shadow-gray-900/5 ring-1 ring-gray-200'
-                  : 'hover:bg-white/60'"
+                [class]="'w-full flex items-start gap-3 p-3 rounded-xl text-left transition-all duration-200 cursor-pointer ' +
+                  (i === selectedIndex()
+                    ? 'bg-white shadow-md shadow-gray-900/5 ring-1 ring-gray-200'
+                    : 'hover:bg-white/60')"
                 (click)="selectVideo(i)"
               >
                 <!-- Index / Now Playing indicator -->
-                <div class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5 transition-colors"
-                  [ngClass]="i === selectedIndex()
+                <div [class]="'w-7 h-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5 transition-colors ' +
+                  (i === selectedIndex()
                     ? 'bg-gradient-to-br from-violet-500 to-indigo-600 shadow-sm shadow-violet-500/20'
-                    : 'bg-gray-100'"
+                    : 'bg-gray-100')"
                 >
                   @if (i === selectedIndex()) {
                     <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -77,16 +76,16 @@
 
                 <!-- Video Info -->
                 <div class="min-w-0 flex-1">
-                  <p class="text-[13px] font-medium leading-snug line-clamp-2"
-                    [ngClass]="i === selectedIndex() ? 'text-gray-900' : 'text-gray-600'"
+                  <p [class]="'text-[13px] font-medium leading-snug line-clamp-2 ' +
+                    (i === selectedIndex() ? 'text-gray-900' : 'text-gray-600')"
                   >
                     {{ video.title }}
                   </p>
                   <span
-                    class="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider mt-1.5"
-                    [ngClass]="i === selectedIndex() ? 'text-violet-500' : 'text-gray-400'"
+                    [class]="'inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider mt-1.5 ' +
+                      (i === selectedIndex() ? 'text-violet-500' : 'text-gray-400')"
                   >
-                    <span class="w-1 h-1 rounded-full" [ngClass]="getSourceDot(video.source)"></span>
+                    <span [class]="'w-1 h-1 rounded-full ' + getSourceDot(video.source)"></span>
                     {{ video.source }}
                   </span>
                 </div>

@@ -1,5 +1,4 @@
 import { Component, computed, signal } from '@angular/core';
-import { NgClass } from '@angular/common';
 import { VideoPlayerComponent } from './components/video-player/video-player';
 
 interface VideoItem {
@@ -20,7 +19,7 @@ const SOURCE_COLORS: Record<string, { badge: string; dot: string }> = {
 
 @Component({
   selector: 'app-root',
-  imports: [NgClass, VideoPlayerComponent],
+  imports: [VideoPlayerComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
