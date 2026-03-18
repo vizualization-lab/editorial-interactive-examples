@@ -52,7 +52,7 @@
           <div class="space-y-1.5 max-h-[calc(100vh-12rem)] overflow-y-auto pr-1 playlist-scroll">
             @for (video of videos; track video.file; let i = $index) {
               <button
-                class="w-full flex items-start gap-3 p-3 rounded-xl text-left transition-all duration-200"
+                class="w-full flex items-start gap-3 p-3 rounded-xl text-left transition-all duration-200 cursor-pointer"
                 [ngClass]="i === selectedIndex()
                   ? 'bg-white shadow-md shadow-gray-900/5 ring-1 ring-gray-200'
                   : 'hover:bg-white/60'"
