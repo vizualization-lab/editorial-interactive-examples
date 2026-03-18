@@ -8,14 +8,14 @@ interface VideoItem {
   title: string;
 }
 
-const SOURCE_COLORS: Record<string, string> = {
-  'Reuters': 'bg-orange-500/20 text-orange-400',
-  'Washington Post': 'bg-blue-500/20 text-blue-400',
-  'CNN Travel': 'bg-red-500/20 text-red-400',
-  'Financial Times': 'bg-amber-500/20 text-amber-400',
-  'The Guardian': 'bg-indigo-500/20 text-indigo-400',
-  'National Geographic': 'bg-yellow-500/20 text-yellow-400',
-  'Associated Press': 'bg-emerald-500/20 text-emerald-400',
+const SOURCE_COLORS: Record<string, { badge: string; dot: string }> = {
+  'Reuters': { badge: 'bg-orange-50 text-orange-600', dot: 'bg-orange-500' },
+  'Washington Post': { badge: 'bg-blue-50 text-blue-600', dot: 'bg-blue-500' },
+  'CNN Travel': { badge: 'bg-red-50 text-red-600', dot: 'bg-red-500' },
+  'Financial Times': { badge: 'bg-amber-50 text-amber-700', dot: 'bg-amber-500' },
+  'The Guardian': { badge: 'bg-indigo-50 text-indigo-600', dot: 'bg-indigo-500' },
+  'National Geographic': { badge: 'bg-yellow-50 text-yellow-700', dot: 'bg-yellow-500' },
+  'Associated Press': { badge: 'bg-emerald-50 text-emerald-700', dot: 'bg-emerald-500' },
 };
 
 @Component({
@@ -46,7 +46,11 @@ export class AppComponent {
     this.selectedIndex.set(index);
   }
 
-  getSourceColor(source: string): string {
-    return SOURCE_COLORS[source] || 'bg-gray-500/20 text-gray-400';
+  getSourceBadge(source: string): string {
+    return SOURCE_COLORS[source]?.badge || 'bg-gray-50 text-gray-600';
+  }
+
+  getSourceDot(source: string): string {
+    return SOURCE_COLORS[source]?.dot || 'bg-gray-400';
   }
 }

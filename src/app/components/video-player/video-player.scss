@@ -16,27 +16,29 @@
 .volume-slider {
   -webkit-appearance: none;
   appearance: none;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.3);
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
   outline: none;
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: white;
     cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
 
   &::-moz-range-thumb {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: white;
     cursor: pointer;
     border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
 }

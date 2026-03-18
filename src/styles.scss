@@ -1,1 +1,8 @@
+@use "@fontsource-variable/inter";
+@use "@fontsource/dm-serif-display/400" as dm-serif;
 @use "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter Variable', system-ui, -apple-system, sans-serif;
+  --font-editorial: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+}
